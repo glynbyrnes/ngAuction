@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // Material stuff. See https://pixel-tones.com/how-to-add-material-design-icons-on-angular-11/
-import { MatIconModule } from '@angular/material/icon' ;
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatIconModule } from '@angular/material/icon' ;
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SearchComponent } from './search/search.component';
 import { StarsComponent } from './stars/stars.component';
 import { ProductService } from './shared/product.service';
+import { AuctionMaterialModule } from './auction-material/auction-material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,8 @@ import { ProductService } from './shared/product.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule
+    AuctionMaterialModule,
+    FormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
